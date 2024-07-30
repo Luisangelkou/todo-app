@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.app {
+  @apply flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white;
+}
+
+.todo-input {
+  @apply p-2 rounded-md bg-gray-700 text-white placeholder-gray-400;
+}
+
+button {
+  @apply p-2 ml-2 rounded-md bg-blue-500 text-white hover:bg-blue-600;
+}
+
+.filter-buttons button {
+  @apply p-2 m-2 rounded-md bg-gray-700 text-white hover:bg-gray-600;
+}
+
+.todo-list {
+  @apply mt-4 w-full max-w-md;
+}
+
+.todo-item {
+  @apply flex items-center justify-between p-2 m-2 bg-gray-800 rounded-md;
+}
+
+.todo-item.completed span {
+  @apply line-through text-gray-500;
+}
+
+.todo-item input[type="checkbox"] {
+  @apply mr-2;
+}
+
+.todo-item button {
+  @apply p-2 bg-red-500 text-white rounded-md hover:bg-red-600;
+}

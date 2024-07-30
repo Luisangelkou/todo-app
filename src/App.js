@@ -1,37 +1,48 @@
 import React, { useState } from 'react';
-import TodoInput from './components/TodoInput';
-import TodoList from './components/TodoList';
 import './App.css';
+import FormularioTarea from './components/FormularioTarea';
+import ListaTareas from './components/ListaTareas';
 
 const App = () => {
-  const [todos, setTodos] = useState([]);
+  const [tareas, setTareas] = useState([]);
+  const [filtro, setFiltro] = useState('todas');
 
-  const addTodo = (text) => {
-    const newTodo = {
-      id: Date.now(),
-      text,
-      completed: false
-    };
-    setTodos([...todos, newTodo]);
+  const agregarTarea = (tarea) => {
+    setTareas([...tareas, tarea]);
   };
 
-  const toggleComplete = (id) => {
-    setTodos(
-      todos.map((todo) =>
-        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+  const cambiarEstadoTarea = (titulo) => {
+    setTareas(
+      tareas.map((tarea) =>
+        tarea.titulo === titulo ? { ...tarea, completada: !tarea.completada } : tarea
       )
     );
   };
 
-  const removeTodo = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id));
+  const eliminarTarea = (titulo) => {
+    setTareas(tareas.filter((tarea) => tarea.titulo !== titulo));
   };
 
+  const tareasFiltradas = tareas.filter((tarea) => {
+    if (filtro === 'completadas') return tarea.completada;
+    if (filtro === 'noCompletadas') return !tarea.completada;
+    return true;
+  });
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white font-sans">
-      <h1 className="text-4xl mb-4">Todo App</h1>
-      <TodoInput addTodo={addTodo} />
-      <TodoList todos={todos} toggleComplete={toggleComplete} removeTodo={removeTodo} />
+    <div className="container">
+      <h1>Gestión de Proyectos</h1>
+      <FormularioTarea agregarTarea={agregarTarea} />
+      <div className="filters">
+        <button onClick={() => setFiltro('todas')}>Todas</button>
+        <button onClick={() => setFiltro('completadas')}>Completadas</button>
+        <button onClick={() => setFiltro('noCompletadas')}>No Completadas</button>
+      </div>
+      <ListaTareas 
+        tareas={tareasFiltradas} 
+        cambiarEstadoTarea={cambiarEstadoTarea} 
+        eliminarTarea={eliminarTarea} 
+      />
     </div>
   );
 };
