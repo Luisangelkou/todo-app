@@ -1,70 +1,46 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Luis Angel Alba Matricula 2022-0397
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Link del video: https://drive.google.com/file/d/1lNC4yZ3ADMhkBMKm5szzKiXPyta3Z9sq/view?usp=sharing
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+TodoAPP en React
 
-### `npm run build`
+## Descripcion
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Descripción de la Aplicación de Gestión de Proyectos
+Objetivo
+La aplicación de Gestión de Proyectos está diseñada para ayudar a los usuarios a organizar y realizar un seguimiento de sus tareas y proyectos de manera efectiva. Permite a los usuarios agregar, marcar como completadas y eliminar tareas, así como filtrar las tareas según su estado (todas, completadas, no completadas).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Características Principales
+Formulario de Nueva Tarea:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Los usuarios pueden ingresar el título y la descripción de una nueva tarea.
+Un botón "Agregar Tarea" para añadir la tarea a la lista.
+Lista de Tareas:
 
-### `npm run eject`
+Muestra todas las tareas agregadas por el usuario.
+Cada tarea incluye un título y una descripción.
+Las tareas pueden ser marcadas como completadas o no completadas, lo que se refleja visualmente mediante un tachado en el título de las tareas completadas.
+Botones para "Desmarcar" y "Eliminar" tareas individuales.
+Filtros de Tareas:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Botones para filtrar las tareas mostradas en la lista:
+Todas: Muestra todas las tareas.
+Completadas: Muestra solo las tareas marcadas como completadas.
+No Completadas: Muestra solo las tareas que aún no se han completado.
+Funcionalidades Técnicas
+Estado Compartido: Utiliza el estado compartido para gestionar las tareas, permitiendo actualizaciones en tiempo real cuando se agregan, completan o eliminan tareas.
+Renderizado Condicional: Implementa renderizado condicional para mostrar las tareas según el filtro seleccionado (todas, completadas, no completadas).
+Tecnologías Utilizadas
+React: Biblioteca de JavaScript para construir interfaces de usuario.
+Vite: Herramienta de construcción rápida para desarrollo frontend.
+CSS: Para estilizar y dar formato a la aplicación.
+Estilo y Diseño
+La aplicación tiene un diseño limpio y centrado, con un esquema de colores que facilita la diferenciación de las tareas y las acciones disponibles.
+La interfaz de usuario es intuitiva y fácil de usar, con todos los elementos esenciales claramente visibles y accesibles.
+Esta aplicación es ideal para cualquier persona que necesite una herramienta simple pero efectiva para gestionar sus proyectos y mantenerse organizada.
